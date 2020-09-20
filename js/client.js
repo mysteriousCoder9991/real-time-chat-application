@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     socket.emit('send', message);
     messageInput.value = ''
 })
-const name = prompt("enter your name to join")
+const name = prompt("Please enter your name to join the application")
 socket.emit('new-user-joined', name)
 socket.on('user-joined', name => {
     //const ab=name.concat(' joined the chat')
